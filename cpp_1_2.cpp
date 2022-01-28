@@ -39,8 +39,6 @@ int main() {
         }
     }
 
-
-
     // switch
     int user_input_for_switch;
     std::cout << "date" << std::endl;
