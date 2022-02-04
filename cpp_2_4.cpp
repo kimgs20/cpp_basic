@@ -55,15 +55,30 @@ void Marine::show_status() {
 }
 
 int main() {
-    Marine marine1(2, 3);
-    Marine marine2(3, 5);
+    Marine* marines[100];
 
-    marine1.show_status();
-    marine2.show_status();
+    marines[0] = new Marine(2, 3);
+    marines[1] = new Marine(3, 5);
+
+    marines[0]->show_status();
+    marines[0]->show_status();
 
     std::cout << std::endl << "marine1 attack marine2" << std::endl;
-    marine2.be_attacked(marine1.attack());
 
-    marine1.show_status();
-    marine2.show_status();
+    marines[0]->show_status();
+    marines[0]->show_status();
+    
+    delete marines[0];
+    delete marines[1];  // auto delete: destuctor
+
+    return 0;
 }
+
+/*
+new-delete != malloc
+
+new: automatically call constructor at dynamically create object (?) (line60, 61)
+
+
+*** 2/5 review malloc, new, delete
+*/
