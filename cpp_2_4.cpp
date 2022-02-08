@@ -23,7 +23,6 @@ class Marine {
         void move(int x, int y);
 
         void show_status();
-        void return_name();
 };
 
 Marine::Marine() {
@@ -70,10 +69,6 @@ void Marine::show_status() {
     std::cout << "Marine" << std::endl;
     std::cout << "Location: (" << coord_x << ", " << coord_y << ") " << std::endl;
     std::cout << "HP: " << hp << std::endl;
-}
-
-void Marine::return_name() {
-    std::cout << name << std::endl;
 }
 
 Marine::~Marine() {  // no arguments, return
