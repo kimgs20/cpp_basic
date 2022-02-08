@@ -93,25 +93,25 @@ void Date::ShowDate() {
 int main() {
 
     // 1.
-    // Date day(2022, 2, 2);  // contructor overloading (implicit: recommended)
-    // // Date day = Date(2022, 2, 2);  // (explicit)
-    // day.ShowDate();
+    Date day(2022, 2, 2);  // contructor overloading (implicit: recommended)
+    // Date day = Date(2022, 2, 2);  // (explicit)
+    day.ShowDate();
 
-    // day.AddDay(31);
-    // day.ShowDate();
+    day.AddDay(31);
+    day.ShowDate();
 
-    // day.AddMonth(9);
-    // day.ShowDate();
+    day.AddMonth(9);
+    day.ShowDate();
 
-    // day.AddYear(15);
-    // day.ShowDate();
+    day.AddYear(15);
+    day.ShowDate();
 
     // 2.
-    Date day = Date();  // default constructor
-    Date day2(2022, 2, 2);  // contructor overloading
+    // Date day = Date();  // default constructor
+    // Date day2(2022, 2, 2);  // contructor overloading
 
-    day.ShowDate();
-    day2.ShowDate();
+    // day.ShowDate();
+    // day2.ShowDate();
 
     // 3.
     // Date day();  // (X) this is definition of function that don't have arguments
