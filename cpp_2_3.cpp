@@ -10,8 +10,11 @@ class Date {
     int day_;
 
     // definition of function in class
-    // and body of function decripted at the out of class
+    // and body of function decripted at the out of the class.
+    // because if class memeber function descrpited in the class,
+    // then code of class will be so long.
     public:
+        // Date() = default;  // define default constructor
         void SetDate(int year, int month, int date);
         void AddDay(int inc);
         void AddMonth(int inc);
@@ -25,13 +28,16 @@ class Date {
     // constructor
     // :A function that is automatically called when an object is created.
     Date(int year, int month, int day) {
+        std::cout << "called constructor" << std::endl;
         year_ = year;
         month_ = month;
         day_ = day;
     }
 
     // default constructor
+    // :if programmer doesn't define the initialization values, it will be used automatically.
     Date() {
+        std::cout << "called default constructor" << std::endl;
         year_ = 2023;
         month_ = 7;
         day_ = 12;
@@ -87,25 +93,30 @@ void Date::ShowDate() {
 int main() {
 
     // 1.
-    Date day(2022, 2, 2);  // contructor overloading
-    day.ShowDate();
+    // Date day(2022, 2, 2);  // contructor overloading (implicit: recommended)
+    // // Date day = Date(2022, 2, 2);  // (explicit)
+    // day.ShowDate();
 
-    day.AddDay(31);
-    day.ShowDate();
+    // day.AddDay(31);
+    // day.ShowDate();
 
-    day.AddMonth(9);
-    day.ShowDate();
+    // day.AddMonth(9);
+    // day.ShowDate();
 
-    day.AddYear(15);
-    day.ShowDate();
+    // day.AddYear(15);
+    // day.ShowDate();
 
     // 2.
-    // Date day;  // default constructor
-    // day.ShowDate();
+    Date day = Date();  // default constructor
+    Date day2(2022, 2, 2);  // contructor overloading
+
+    day.ShowDate();
+    day2.ShowDate();
 
     // 3.
     // Date day();  // (X) this is definition of function that don't have arguments
-    // Date day;    // (O)
+    // Date day;    // (O) this is call constructor that doesn't have arguments
+    // day.ShowDate();
 
     return 0;
 }
