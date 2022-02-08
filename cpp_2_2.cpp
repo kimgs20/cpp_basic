@@ -21,4 +21,25 @@ int main() {
 
     return 0;
 }
-// pay attention to ambiguous function overloading
+
+/*
+pay attention to ambiguous function overloading.
+(ex)
+
+#include <iostream>
+
+void print(int x) { std::cout << "int: " << x << std::endl; }
+void print(char x) { std::cout << "double: " << x << std::endl; }
+
+int main() {
+    int a = 1;
+    char b = 'c';
+    double c = 3.2f;
+
+    print(a);
+    print(b);
+    print(c);  // error: call of overloaded ‘print(double&)’ is ambiguous
+
+    return 0;
+}
+*/
