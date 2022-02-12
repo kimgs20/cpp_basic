@@ -28,7 +28,7 @@ int main() {
     a.show_x();  // 3
 
     int d = a.access_x();
-    d = 2;  // d is not refrence of x, just independent variable
+    d = 2;  // d is not reference of x, just independent variable
     a.show_x();  // 3
 
     // error
