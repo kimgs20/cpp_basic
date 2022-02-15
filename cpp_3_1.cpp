@@ -10,12 +10,18 @@ class Complex {
 
     public:
         Complex(double real, double img) : real(real), img(img) {}
+        Complex(const Complex& c) { real = c.real, img = c.img; }
 
         // return value (not reference)
         Complex operator+(const Complex& c) const;  
         Complex operator-(const Complex& c) const;
         Complex operator*(const Complex& c) const;
         Complex operator/(const Complex& c) const;
+
+        Complex& operator+=(const Complex& c);
+        Complex& operator-=(const Complex& c);
+        Complex& operator*=(const Complex& c);
+        Complex& operator/=(const Complex& c);
 
         void println() { std::cout << "(" << real << ", " << img << ")" << std::endl; }
 };
@@ -42,11 +48,34 @@ Complex Complex::operator/(const Complex& c) const {
     return temp;
 }
 
+Complex& Complex::operator+=(const Complex& c) {
+    (*this) = (*this) + c;
+    return *this;
+}
+
+
+Complex& Complex::operator-=(const Complex& c) {
+    (*this) = (*this) - c;
+    return *this;
+}
+
+Complex& Complex::operator*=(const Complex& c) {
+    (*this) = (*this) * c;
+    return *this;
+}
+
+Complex& Complex::operator/=(const Complex& c) {
+    (*this) = (*this) / c;
+    return *this;
+}
+
+
 int main() {
     Complex a(1.0, 2.0);
     Complex b(3.0, -2.0);
 
-    Complex c = a * b;  // (7, 4)
+    a += b;
 
-    c.println();
+    a.println();
+    b.println();
 }
