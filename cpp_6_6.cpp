@@ -16,7 +16,7 @@ void print(T arg, Types... args) {
 }
 
 int main() {
-    print(1, 3.1, "abc");  // like 'prinf' of python
+    print(1, 3.1, "abc");  // like 'print' of python
     print(1, 2, 3, 4, 5, 6, 7);
 
     return 0;
