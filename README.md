@@ -8,3 +8,10 @@
 6. template
 7. standard template library (STL)
 8. exception
+
+# To do list
+
+- [ ] enrolling UNIST Ph.D course
+- [ ] Research KIMM autonomous crane control
+
+
