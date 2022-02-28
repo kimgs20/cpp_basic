@@ -65,7 +65,7 @@ int main() {
     str_vec.push_back("hello");
     str_vec.push_back("world");
 
-    std::cout << "- - - int vector - - -" << std::endl;
+    std::cout << "- - - std::string vector - - -" << std::endl;
     std::cout << "first element: " << str_vec[0] << std::endl;
     std::cout << "second element: " << str_vec[1] << std::endl;
 
