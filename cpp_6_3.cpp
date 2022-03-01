@@ -1,5 +1,5 @@
 /*
-fucntion template
+function template
 */
 
 #include <iostream>
