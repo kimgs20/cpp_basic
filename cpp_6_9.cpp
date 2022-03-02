@@ -17,6 +17,8 @@ struct Factorial<1> {
 
 int main() {
     std::cout << "6! = 1*2*3*4*5* = " << Factorial<6>::result << std::endl;
+
+    return 0;
 }
 
 /*
