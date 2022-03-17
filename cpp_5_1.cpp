@@ -1,5 +1,5 @@
 /*
-input, output stream
+input, output library
 
 fstream, ofstream, ifstram, iostream, istream, ostream, ios, ios_base
 
@@ -10,10 +10,11 @@ flag of ios class
 - badbit
 - failbit
 - eofbit
+
+operator>> igrnore every space character ex) " ", "\n", "\t"
 */
 
 #include <iostream>
-#include <string>
 
 int main() {
     int t;
