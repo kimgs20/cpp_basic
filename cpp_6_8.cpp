@@ -1,5 +1,5 @@
 /*
-template meta programming
+non-type template argument
 */
 
 #include <iostream>
