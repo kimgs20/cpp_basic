@@ -21,11 +21,14 @@ class MyString {
         void println() const;
 };
 
+// create from one character
 MyString::MyString(char c) {
+    string_length = 1;
     string_content = new char[1];
     string_content[0] = c;
 }
 
+// create from string
 MyString::MyString(const char* str) {
     string_length = strlen(str);
     string_content = new char[string_length];
@@ -35,6 +38,7 @@ MyString::MyString(const char* str) {
     }
 }
 
+// copy constructor
 MyString::MyString(const MyString& str) {
     string_length = str.string_length;
     string_content = new char[string_length];
@@ -47,7 +51,6 @@ MyString::MyString(const MyString& str) {
 MyString::~MyString() { delete[] string_content; }
 
 int MyString::length() const { return string_length; }
-
 
 void MyString::print() const {
     for (int i = 0; i != string_length; i++) {
