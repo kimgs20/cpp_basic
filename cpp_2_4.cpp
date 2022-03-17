@@ -86,7 +86,7 @@ int main() {
     marines[1] = new Marine(3, 5, "Marine 2");
 
                                     // ptr->method = (*ptr).method
-    marines[0]->show_status();      // call method use -> instead of . (because this array of pointers)
+    marines[0]->show_status();      // call method use -> instead of . (because this is array of pointers)
     // (*marines[0]).show_status();
     marines[1]->show_status();
 
