@@ -1,5 +1,5 @@
 /*
-thread - partoal sum
+thread - partial sum
 */
 
 #include <iostream>
