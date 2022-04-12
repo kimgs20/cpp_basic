@@ -8,3 +8,7 @@
 6. template
 7. standard template library (STL)
 8. exception
+9. move con, rvalue ref, move sem, perfect forwarding
+10. unique, weak, shared ptr
+11. std::function, mem_fn, bind
+12. thread
