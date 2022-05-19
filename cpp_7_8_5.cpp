@@ -37,3 +37,9 @@ int main() {
     print(vec.begin(), vec.end());
     return 0;
 }
+/*
+- - - initial vec - - -
+[5] [3] [1] [2] [3] [4] 
+- - - initial vec - - -
+[6] [4] [2] [3] [4] [5] 
+*/
